@@ -4,23 +4,32 @@
 // @tailwind base;
 // @tailwind components;
 // @tailwind utilities;
+
 import React, { useState, useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import ProductListPage from './pages/ProductListPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import NewsMediaPage from './pages/NewsMediaPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import CareerPage from './pages/CareerPage';
+
 import './App.css'; // Import your Tailwind CSS 
 // styles here or in index.css
 // client/src/App.js
+// client/src/App.js
+// প্রধান অ্যাপ্লিকেশন কম্পোনেন্ট
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
-  const [language, setLanguage] = useState('en'); // Global language state
+  const [language, setLanguage] = useState('en'); // গ্লোবাল ভাষা স্টেট
 
+  // ভাষা পরিবর্তনের হ্যান্ডলার
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
   };
 
-  // Simple routing logic based on hash or state
+  // হ্যাশ পরিবর্তনের উপর ভিত্তি করে সাধারণ রাউটিং লজিক
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.substring(1);
@@ -32,32 +41,28 @@ const App = () => {
     };
 
     window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Set initial page
+    handleHashChange(); // প্রাথমিক পৃষ্ঠা সেট করুন
 
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
 
+  // বর্তমান পৃষ্ঠা রেন্ডার করার ফাংশন
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
         return <HomePage language={language} />;
       case 'products':
         return <ProductListPage language={language} />;
-      // Add more cases for other pages (News & media, Career, About, Contact)
-      // For now, they will just show a placeholder or redirect to home
       case 'news-media':
+        return <NewsMediaPage language={language} />;
       case 'career':
+        return <CareerPage language={language} />;
       case 'about':
+        return <AboutPage language={language} />;
       case 'contact':
-        return (
-          <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-gray-800">
-              {language === 'en' ? `${currentPage} Page (Coming Soon)` : `${currentPage} পৃষ্ঠা (শীঘ্রই আসছে)`}
-            </h1>
-          </div>
-        );
+        return <ContactPage language={language} />;
       default:
         return <HomePage language={language} />;
     }
