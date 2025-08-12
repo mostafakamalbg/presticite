@@ -65,14 +65,14 @@ const Footer = ({ language }) => {
           <address className="not-italic text-gray-300 text-sm space-y-2">
             <p>
               {language === 'en'
-                ? 'House: 01, Road: 02, Block: A, Section: 10, Mirpur, Dhaka-1216'
-                : 'বাড়ি: ০১, রোড: ০২, ব্লক: এ, সেকশন: ১০, মিরপুর, ঢাকা-১২১৬'}
+                ? 'House: CA#1, Road:01, Uposhohor, Bogura -5800 '
+                : 'বাড়ি: ০১, রোড: ০১'}
             </p>
             <p>
-              {language === 'en' ? 'Phone: +880 1234 567890' : 'ফোন: +৮৮০ ১২৩৪ ৫৬৭৮৯০'}
+              {language === 'en' ? 'Phone: +880 1867 912167' : 'ফোন: +৮৮০ ১৮৬৭ ৯১২১৬৭'}
             </p>
             <p>
-              {language === 'en' ? 'Email: info@bgagro.com' : 'ইমেইল: info@bgagro.com'}
+              {language === 'en' ? 'Email: mostafakamalbg@gmail.com' : 'ইমেইল: mostafakamalbg@gmail.com'}
             </p>
           </address>
           <div className="flex mt-4 space-x-4">

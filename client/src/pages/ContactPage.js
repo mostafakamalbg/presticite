@@ -111,16 +111,15 @@ const ContactPage = ({ language }) => {
             {language === 'en' ? 'Alternatively, you can reach us at:' : 'বিকল্পভাবে, আপনি আমাদের সাথে যোগাযোগ করতে পারেন:'}
           </p>
           <p className="font-semibold">
-            {language === 'en' ? 'Email: info@bgagro.com' : 'ইমেইল: info@bgagro.com'}
+            {language === 'en' ? 'Email: mostafakamalbg@gmail.com' : 'ইমেইল: mostafakamalbg@gmail.com'}
           </p>
           <p className="font-semibold">
-            {language === 'en' ? 'Phone: +880 1234 567890' : 'ফোন: +৮৮০ ১২৩৪ ৫৬৭৮৯০'}
+            {language === 'en' ? 'Phone: +880 1867 912167 ' : 'ফোন: +৮৮০ ১৮৬৭ ৯১২১৬৭'}
           </p>
           <p className="mt-4">
             {language === 'en' ? 'Our Office Address:' : 'আমাদের অফিসের ঠিকানা:'}
             <br />
-            House: 01, Road: 02, Block: A, Section: 10, Mirpur, Dhaka-1216
-          </p>
+            {language === 'en' ? 'House: 01, Road: 01, Uposhohor, Bogura -5800:' : 'হোল্ডিং নম্বর : সিএ#০১, মেইন রোড: ০২, উপশহর, বগুড়া।'}      </p>
         </div>
       </div>
     </div>
