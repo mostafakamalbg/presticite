@@ -81,7 +81,7 @@ const Header = ({ onLanguageChange }) => {
             href="#contact"
             className="block mt-4 lg:inline-block lg:mt-0 text-green-700 hover:text-green-900 p-2 rounded-md hover:bg-green-100 transition-colors duration-200"
           >
-            {language === 'en' ? 'Contact' : 'যোগাযোগ'}
+            {language === 'en' ? 'Contact Us' : 'যোগাযোগ'}
           </a>
         </div>
         {/* ভাষা পরিবর্তন ড্রপডাউন */}
