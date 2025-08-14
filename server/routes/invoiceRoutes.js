@@ -8,7 +8,7 @@ const {
   updateInvoiceStatus,
   deleteInvoice,
 } = require('../controllers/invoiceController'); // invoiceController থেকে ফাংশনগুলি ইম্পোর্ট করুন
-const { protect, admin } = require('../middleware/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন (সুরক্ষার জন্য)
+const { protect, admin } = require('../middlewares/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন (সুরক্ষার জন্য)
 
 // নতুন ইনভয়েস তৈরি করুন (শুধুমাত্র অ্যাডমিন)
 router.post('/', protect, admin, createInvoice);

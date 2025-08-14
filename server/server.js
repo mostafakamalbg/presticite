@@ -8,7 +8,7 @@ const userRoutes = require('./routes/userRoutes'); // ব্যবহারক�
 const inventoryRoutes = require('./routes/inventoryRoutes'); // ইনভেন্টরি রাউট ইম্পোর্ট করুন
 const orderRoutes = require('./routes/orderRoutes'); // ***নতুন: অর্ডার রাউট ইম্পোর্ট করুন***
 const invoiceRoutes = require('./routes/invoiceRoutes'); // ***নতুন: ইনভয়েস রাউট ইম্পোর্ট করুন***
-const { errorHandler } = require('./middleware/errorMiddleware'); // ত্রুটি হ্যান্ডলার ইম্পোর্ট করুন
+const { errorHandler } = require('./middlewares/errorMiddleware'); // ত্রুটি হ্যান্ডলার ইম্পোর্ট করুন
 
 // MongoDB Atlas এর সাথে সংযোগ স্থাপন করুন
 connectDB();

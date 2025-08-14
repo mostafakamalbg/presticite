@@ -9,7 +9,7 @@ const {
   updateUserRole, // নতুন
   deleteUser, // নতুন
 } = require('../controllers/userController'); // userController থেকে ফাংশনগুলি ইম্পোর্ট করুন
-const { protect, admin } = require('../middleware/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন
+const { protect, admin } = require('../middlewares/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন
 
 // ব্যবহারকারী নিবন্ধন রাউট
 router.post('/register', registerUser);

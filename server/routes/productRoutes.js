@@ -8,6 +8,7 @@ const {
   updateProduct,
   deleteProduct,
 } = require('../controllers/productController'); // productController থেকে ফাংশনগুলি ইম্পোর্ট করুন
+const { protect, admin } = require('../middlewares/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন (সুরক্ষার জন্য)
 
 // সমস্ত পণ্য পাওয়ার এবং নতুন পণ্য তৈরি করার জন্য রাউট
 router.route('/').get(getProducts).post(createProduct);

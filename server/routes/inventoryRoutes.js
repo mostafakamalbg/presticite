@@ -8,7 +8,7 @@ const {
   updateInventory,
   deleteInventory,
 } = require('../controllers/inventoryController'); // inventoryController থেকে ফাংশনগুলি ইম্পোর্ট করুন
-const { protect, admin } = require('../middleware/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন (সুরক্ষার জন্য)
+const { protect, admin } = require('../middlewares/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন (সুরক্ষার জন্য)
 
 // সমস্ত ইনভেন্টরি আইটেম পাওয়ার এবং নতুন ইনভেন্টরি এন্ট্রি তৈরি করার জন্য রাউট
 // এই রাউটগুলি 'protect' এবং 'admin' মিডলওয়্যার দ্বারা সুরক্ষিত

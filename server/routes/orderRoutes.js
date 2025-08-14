@@ -9,7 +9,7 @@ const {
   updateOrderToDelivered,
   getOrders, // সমস্ত অর্ডার পাওয়ার জন্য (শুধুমাত্র অ্যাডমিন)
 } = require('../controllers/orderController'); // orderController থেকে ফাংশনগুলি ইম্পোর্ট করুন
-const { protect, admin } = require('../middleware/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন (সুরক্ষার জন্য)
+const { protect, admin } = require('../middlewares/authMiddleware'); // authMiddleware থেকে ফাংশনগুলি ইম্পোর্ট করুন (সুরক্ষার জন্য)
 
 // নতুন অর্ডার তৈরি করুন (লগইন করা ব্যবহারকারী)
 router.post('/', protect, createOrder);
